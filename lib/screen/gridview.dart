@@ -60,6 +60,7 @@ class GridViewWidgetState extends State<GridViewWidget> {
                                   Text(
                                     pokemonList.name,
                                     style: TextStyle(
+                                      fontWeight: FontWeight.bold,
                                       fontSize: 18,
                                       color: Color.fromARGB(255, 102, 0, 0),
                                     ),

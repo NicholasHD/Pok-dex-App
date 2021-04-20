@@ -13,11 +13,13 @@ class PokedexApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Pokédex',
       theme: ThemeData(
-          primaryColor: Color.fromARGB(255, 102, 0, 0),
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          fontFamily: 'PocketMonk'),
+        fontFamily: 'VCR',
+        primaryColor: Color.fromARGB(255, 102, 0, 0),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomePage(),
     );
   }
@@ -33,7 +35,10 @@ class HomePageState extends State<HomePage> {
   SearchBar searchBar;
   AppBar buildAppBar(BuildContext context) {
     return new AppBar(
-      title: new Text('Pokédex'),
+      title: new Text(
+        'Pokédex',
+        style: TextStyle(fontFamily: 'PocketMonk'),
+      ),
       actions: [searchBar.getSearchAction(context)],
     );
   }

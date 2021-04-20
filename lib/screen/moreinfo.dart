@@ -33,7 +33,10 @@ class MoreInfo extends StatelessWidget {
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 102, 0, 0),
         appBar: AppBar(
-          title: Text(pokemonInfo.nameTemp),
+          title: Text(
+            pokemonInfo.nameTemp,
+            style: TextStyle(fontFamily: 'PocketMonk'),
+          ),
         ),
         body: Stack(
           children: <Widget>[
@@ -53,10 +56,11 @@ class MoreInfo extends StatelessWidget {
                     children: [
                       Text(
                         pokemonInfo.nameTemp,
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'National No: ${pokemonInfo.id}',
+                        'National № : ${pokemonInfo.id}',
                         style: TextStyle(fontSize: 16),
                       ),
                     ],
@@ -64,9 +68,11 @@ class MoreInfo extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        'Types',
-                        style: TextStyle(fontSize: 18),
+                        'Type',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
+                      SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -79,10 +85,7 @@ class MoreInfo extends StatelessWidget {
                                     horizontal: 15, vertical: 8),
                                 index: index,
                                 title: type,
-                                textStyle: TextStyle(
-                                    fontSize: 14,
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.bold),
+                                textStyle: TextStyle(fontSize: 14),
                                 activeColor: colorPad[type],
                                 textActiveColor: Colors.white,
                                 textColor: Colors.white,
@@ -111,8 +114,10 @@ class MoreInfo extends StatelessWidget {
                     children: [
                       Text(
                         'Abilities',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
+                      SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -127,8 +132,6 @@ class MoreInfo extends StatelessWidget {
                                 title: ability,
                                 textStyle: TextStyle(
                                   fontSize: 14,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
                                 ),
                                 activeColor: Colors.black38,
                                 textActiveColor: Colors.white,
@@ -145,7 +148,8 @@ class MoreInfo extends StatelessWidget {
                     children: [
                       Text(
                         '${pokemonInfo.nameTemp} In-Game Sprite',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -167,8 +171,8 @@ class MoreInfo extends StatelessWidget {
             Align(
                 alignment: Alignment.topCenter,
                 child: Container(
-                  height: 150,
-                  width: 150,
+                  height: 200,
+                  width: 200,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.cover,

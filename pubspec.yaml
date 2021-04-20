@@ -52,6 +52,9 @@ flutter:
     - family: PocketMonk
       fonts:
         - asset: fonts/PocketMonk.ttf
+    - family: VCR
+      fonts:
+        - asset: fonts/VCR.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
