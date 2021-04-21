@@ -118,30 +118,25 @@ class MoreInfo extends StatelessWidget {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Tags(
-                            itemCount: pokemonInfo.abilities.length,
-                            itemBuilder: (int index) {
-                              var ability = pokemonInfo.abilities[index];
-                              return ItemTags(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 5),
-                                index: index,
-                                title: ability,
-                                textStyle: TextStyle(
-                                  fontSize: 14,
-                                ),
-                                activeColor: Colors.black38,
-                                textActiveColor: Colors.white,
-                                textColor: Colors.white,
-                                color: Colors.black38,
-                              );
-                            },
-                          )
-                        ],
-                      ),
+                      Tags(
+                        itemCount: pokemonInfo.abilities.length,
+                        itemBuilder: (int index) {
+                          var ability = pokemonInfo.abilities[index];
+                          return ItemTags(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 5),
+                            index: index,
+                            title: ability,
+                            textStyle: TextStyle(
+                              fontSize: 14,
+                            ),
+                            activeColor: Colors.black38,
+                            textActiveColor: Colors.white,
+                            textColor: Colors.white,
+                            color: Colors.black38,
+                          );
+                        },
+                      )
                     ],
                   ),
                   Column(
